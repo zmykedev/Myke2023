@@ -2,14 +2,14 @@ import styled from "styled-components";
 
 export const StyledHeader = styled.header`
   background-color: rgba(231, 245, 241, 0.8); // Opacidad para efecto de vidrio
-  backdrop-filter: blur(10px); // Desenfoque para efecto de vidrio
+  backdrop-filter: blur(5px); // Desenfoque para efecto de vidrio
   color: white;
   padding: 1rem;
   display: flex;
   position: fixed;
-  width: 100%; // Asegura que ocupe el ancho del contenedor
-  max-width: 1000px; // O el ancho máximo que desees
-  margin: 0 auto; // Centra el Header si es más pequeño que el ancho de la ventana
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
   top: 0;
   left: 0;
   right: 0;
