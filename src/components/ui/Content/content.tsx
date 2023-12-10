@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import React, { ReactNode } from "react";
 import { Content } from "./styledContent";
 
 interface ContentProps {
@@ -11,6 +11,8 @@ export const AppWrapper: React.FunctionComponent<ContentProps> = ({
   return <>{children} </>;
 };
 
-export const Main: React.FunctionComponent<ContentProps> = ({ children }) => {
-  return <Content>{children} </Content>;
-};
+export const Main = React.forwardRef<HTMLDivElement, ContentProps>(
+  ({ children }, ref) => {
+    return <Content ref={ref}>{children}</Content>;
+  },
+);
