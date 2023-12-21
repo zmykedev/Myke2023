@@ -1,5 +1,4 @@
-import styled
-  from "styled-components";
+import styled from "styled-components";
 export const CalendarContainer = styled.div`
   /* Estilos del contenedor principal del calendario */
   padding: 20px;
@@ -18,7 +17,7 @@ export const Day = styled.div`
     6px 6px 0px rgba(0, 0, 0, 0.5),
     7px 7px 0px rgba(0, 0, 0, 0.4),
     8px 8px 0px rgba(0, 0, 0, 0.3),
-    9px 9px 25px rgba(0, 0, 0, 0.25); 
+    9px 9px 25px rgba(0, 0, 0, 0.25);
 `;
 
 export const Year = styled.div`
@@ -33,7 +32,7 @@ export const Year = styled.div`
     6px 6px 0px rgba(0, 0, 0, 0.5),
     7px 7px 0px rgba(0, 0, 0, 0.4),
     8px 8px 0px rgba(0, 0, 0, 0.3),
-    9px 9px 25px rgba(0, 0, 0, 0.25); 
+    9px 9px 25px rgba(0, 0, 0, 0.25);
 `;
 
 export const Month = styled.div`
@@ -48,5 +47,5 @@ export const Month = styled.div`
     6px 6px 0px rgba(0, 0, 0, 0.5),
     7px 7px 0px rgba(0, 0, 0, 0.4),
     8px 8px 0px rgba(0, 0, 0, 0.3),
-    9px 9px 25px rgba(0, 0, 0, 0.25); 
+    9px 9px 25px rgba(0, 0, 0, 0.25);
 `;
