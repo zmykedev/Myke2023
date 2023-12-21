@@ -8,14 +8,14 @@ export const wipeInLeft = {
 export const slideEliptic = {
   animationName: "slide-in-elliptic-left-bck",
   duration: "2s",
-  timingFunction: "cubic-bezier(.25,.46,.45,.94)",
+  timingFunction: "cubic-bezier(.90,.46,.45,.94)",
   fillMode: "both",
 };
 
 export const slideBottomToUp = {
   animationName: "slide-in-elliptic-top-fwd",
   duration: "0.7s",
-  timingFunction: "cubic-bezier(.25,.46,.45,.94)",
+  timingFunction: "cubic-bezier(.40,.60,.60,.94)",
   fillMode: "both",
 };
 

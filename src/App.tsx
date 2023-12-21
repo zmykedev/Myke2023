@@ -2,14 +2,18 @@ import { Header } from "./components/ui/Header/Header";
 import { AppWrapper, Main } from "./components/ui/Content/content";
 import { MkBox } from "./components/ui/Timeline/Box/Box";
 import { Text } from "./components/ui/Title/styles";
+import { WeatherComponent } from "./components/ui/Wheater";
 
 import "./index.css";
 import { EventLine } from "./components/ui/Timeline/styled";
 import myke from "/assets/Myke.jpeg";
 import "./components/ui/Timeline/index.scss";
-import { slideEliptic } from "./animations/library";
+// import { slideEliptic } from "./animations/library";
 import { IconPng } from "./components/ui/Icons/Icons";
 import { StyledStack } from "./components/ui/Icons/styled";
+
+import { Month } from "./components/ui/Month";
+import Calendar from "./components/ui/Calendar";
 
 function App() {
   return (
@@ -17,10 +21,31 @@ function App() {
       <Header />
       <Main>
         <EventLine />
+              <MkBox
+         
+          position="right"
+          height="300px"
+          className=" flex flex-row gap-4"
+        >
+           <div className="rounded-3xl w-[50%] bg-accent-200 ">
+            <Calendar />          </div>
+        
+           <div className="rounded-3xl w-[50%] bg-accent-200 flex justify-center ">
+            <Month/>
+          </div>
+        </MkBox>
+        <MkBox position="left" height="300px" className=" flex flex-row gap-4">
+           <div className="rounded-3xl flex justify-center items-center w-[50%] bg-accent-200 drop-shadow-2xl">
+            <img className="bg-accent-200 " width={200} src="/assets/Chilean.png" />
+          </div>
+         <div className="rounded-3xl w-[50%] bg-accent-200 ">
+            <WeatherComponent />
+          </div> 
+        </MkBox>
         <MkBox
           position="left"
           className="bg-primary-100"
-          animationProps={slideEliptic}
+          
           height="600px"
         >
           <div className="flex flex-col items-center justify-center ">
@@ -61,7 +86,7 @@ function App() {
         </MkBox>
         <MkBox
           position="right"
-          animationProps={slideEliptic}
+          
           height="600px"
           className="bg-primary-100  lg:block"
         >
@@ -122,7 +147,7 @@ function App() {
                   className="font-sans text-white drop-shadow-2xl"
                   fontSize="3rem"
                 >
-                  MicroServices
+                  MicroFronts
                 </Text>
                 <StyledStack className="self-end">
                   <IconPng
@@ -156,15 +181,7 @@ function App() {
             </div>
           </div>
         </MkBox>
-        <MkBox
-          animationProps={slideEliptic}
-          position="left"
-          height="300px"
-          background="blue"
-        ></MkBox>
-        <MkBox position="right" height="300px" background="black">
-          new
-        </MkBox>
+  
         <MkBox position="right" height="300px" background="black">
           new
         </MkBox>
