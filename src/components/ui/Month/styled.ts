@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
-
-export const MonthImage = styled.img`
-`;
+export const MonthImage = styled.img``;
 
 export const CountdownContainer = styled.div`
   display: flex;
@@ -22,7 +20,7 @@ export const TimeNumber = styled.div`
   background: white;
   border-radius: 10px;
   padding: 10px 20px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   font-size: 2em;
   font-weight: bold;
 `;

@@ -1,14 +1,18 @@
 import React from "react";
 import { api } from "./api";
 import { weatherReducer, WeatherActionType, initialState } from "./state";
-import { WeatherContainer, WeatherImage, MainContainer, TitleContainer, Temperature } from "./styled";
-
+import {
+  WeatherContainer,
+  WeatherImage,
+  MainContainer,
+  TitleContainer,
+  Temperature,
+} from "./styled";
 
 export const WeatherComponent: React.FC = () => {
   const [state, dispatch] = React.useReducer(weatherReducer, initialState);
 
-
- const fetchWeatherData = async () => {
+  const fetchWeatherData = async () => {
     dispatch({ type: WeatherActionType.SET_LOADING, payload: true });
 
     try {
@@ -23,29 +27,28 @@ export const WeatherComponent: React.FC = () => {
     }
   };
 
-  
   React.useEffect(() => {
     fetchWeatherData();
-    
 
-   
-   const intervalId = setInterval(() => {
-  fetchWeatherData();
-}, 6000 * 10 );
+    const intervalId = setInterval(() => {
+      fetchWeatherData();
+    }, 6000 * 10);
 
-  
     return () => clearInterval(intervalId);
   }, []);
 
   if (state.loading) {
-    return  <MainContainer>
-      <TitleContainer>Santiago de Chile</TitleContainer>
-      <WeatherContainer>
-        <WeatherImage src="/assets/Sun.png" />
-       { state.weather && (<Temperature>{`${state.weather.current.temperature_2m}°`}</Temperature>)}
-      </WeatherContainer>
-  
-    </MainContainer>;
+    return (
+      <MainContainer>
+        <TitleContainer>Santiago de Chile</TitleContainer>
+        <WeatherContainer>
+          <WeatherImage src="/assets/Sun.png" />
+          {state.weather && (
+            <Temperature>{`${state.weather.current.temperature_2m}°`}</Temperature>
+          )}
+        </WeatherContainer>
+      </MainContainer>
+    );
   }
 
   return (
@@ -53,9 +56,10 @@ export const WeatherComponent: React.FC = () => {
       <TitleContainer>Santiago de Chile</TitleContainer>
       <WeatherContainer>
         <WeatherImage src="/assets/Sun.png" />
-       { state.weather && (<Temperature>{`${state.weather.current.temperature_2m}°`}</Temperature>)}
+        {state.weather && (
+          <Temperature>{`${state.weather.current.temperature_2m}°`}</Temperature>
+        )}
       </WeatherContainer>
-  
     </MainContainer>
   );
 };

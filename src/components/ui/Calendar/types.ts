@@ -1,3 +1,3 @@
 export type CalendarProps = {
-  days: string[]
-}
+  days: string[];
+};

@@ -21,33 +21,28 @@ function App() {
       <Header />
       <Main>
         <EventLine />
-              <MkBox
-         
-          position="right"
-          height="300px"
-          className=" flex flex-row gap-4"
-        >
-           <div className="rounded-3xl w-[50%] bg-accent-200 ">
-            <Calendar />          </div>
-        
-           <div className="rounded-3xl w-[50%] bg-accent-200 flex justify-center ">
-            <Month/>
+        <MkBox position="right" height="300px" className=" flex flex-row gap-4">
+          <div className="rounded-3xl w-[50%] bg-accent-200 ">
+            <Calendar />{" "}
+          </div>
+
+          <div className="rounded-3xl w-[50%] bg-accent-200 flex justify-center ">
+            <Month />
           </div>
         </MkBox>
         <MkBox position="left" height="300px" className=" flex flex-row gap-4">
-           <div className="rounded-3xl flex justify-center items-center w-[50%] bg-accent-200 drop-shadow-2xl">
-            <img className="bg-accent-200 " width={200} src="/assets/Chilean.png" />
+          <div className="rounded-3xl flex justify-center items-center w-[50%] bg-accent-200 drop-shadow-2xl">
+            <img
+              className="bg-accent-200 "
+              width={200}
+              src="/assets/Chilean.png"
+            />
           </div>
-         <div className="rounded-3xl w-[50%] bg-accent-200 ">
+          <div className="rounded-3xl w-[50%] bg-accent-200 ">
             <WeatherComponent />
-          </div> 
+          </div>
         </MkBox>
-        <MkBox
-          position="left"
-          className="bg-primary-100"
-          
-          height="600px"
-        >
+        <MkBox position="left" className="bg-primary-100" height="600px">
           <div className="flex flex-col items-center justify-center ">
             <img className="rounded-full" src={myke} width={300} alt="" />
             <Text className="font-sans text-text-100" fontSize="3rem">
@@ -86,7 +81,6 @@ function App() {
         </MkBox>
         <MkBox
           position="right"
-          
           height="600px"
           className="bg-primary-100  lg:block"
         >
@@ -181,7 +175,6 @@ function App() {
             </div>
           </div>
         </MkBox>
-  
         <MkBox position="right" height="300px" background="black">
           new
         </MkBox>
