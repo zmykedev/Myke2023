@@ -1,4 +1,4 @@
-import { StyledHeader, Nav, NavLink } from "./styledHeader";
+import { StyledHeader, Nav, NavLink } from "./styled";
 
 interface HeaderProps {}
 
