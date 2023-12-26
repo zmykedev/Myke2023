@@ -31,4 +31,9 @@ interface SetLoadingAction {
   payload: boolean;
 }
 
-export type Action = SetWeatherDataAction | SetLoadingAction;
+interface SetVisibleAction {
+  type: WeatherActionType.SET_VISIBLE;
+  payload: boolean;
+}
+
+export type Action = SetWeatherDataAction | SetLoadingAction | SetVisibleAction;

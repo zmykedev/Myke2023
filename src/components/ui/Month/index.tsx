@@ -2,10 +2,9 @@ import React, { useState, useEffect } from "react";
 // Asegúrate de importar los componentes estilizados correctamente
 import {
   MonthImage,
-  TimeCard,
   TimeLabel,
   TimeNumber,
-  CountdownContainer,
+  TimeCard,
   Separator,
 } from "./styled";
 import xmas from "/assets/xmas.webp";
@@ -82,7 +81,7 @@ const getImageFestive = (
 };
 
 export const Month: React.FC = () => {
-  const [tiempoRestante, setTiempoRestante] = useState<{
+  const [timeLeft, setTiempoRestante] = React.useState<{
     dias: number;
     horas: number;
     minutos: number;
@@ -93,9 +92,9 @@ export const Month: React.FC = () => {
   useEffect(() => {
     const actualizarEstado = () => {
       const today = new Date();
-      const [image, tiempo] = getImageFestive(today);
+      const [image, time] = getImageFestive(today);
       setImageFestive(image);
-      setTiempoRestante(tiempo);
+      setTiempoRestante(time);
     };
 
     actualizarEstado();
@@ -109,42 +108,36 @@ export const Month: React.FC = () => {
       {imageFestive ? (
         <>
           {" "}
-          <div className="w-[100px] ">
+          <div className="w-[200px] ">
             <MonthImage src={imageFestive} alt="Festividad en Chile" />
           </div>
-          <CountdownContainer>
-            {tiempoRestante && (
-              <>
-                <TimeCard>
-                  <TimeNumber>
-                    {tiempoRestante.dias.toString().padStart(2, "0")}
-                  </TimeNumber>
-                  <TimeLabel>Días</TimeLabel>
-                </TimeCard>
-                <Separator>:</Separator>
-                <TimeCard>
-                  <TimeNumber>
-                    {tiempoRestante.horas.toString().padStart(2, "0")}
-                  </TimeNumber>
-                  <TimeLabel>Horas</TimeLabel>
-                </TimeCard>
-                <Separator>:</Separator>
-                <TimeCard>
-                  <TimeNumber>
-                    {tiempoRestante.minutos.toString().padStart(2, "0")}
-                  </TimeNumber>
-                  <TimeLabel>Minutos</TimeLabel>
-                </TimeCard>
-                <Separator>:</Separator>
-                <TimeCard>
-                  <TimeNumber>
-                    {tiempoRestante.segundos.toString().padStart(2, "0")}
-                  </TimeNumber>
-                  <TimeLabel>Segundos</TimeLabel>
-                </TimeCard>
-              </>
-            )}
-          </CountdownContainer>
+          <div className="w-[90%] h-[30%] mb-5   flex flex-row gap-1 justify-center">
+            <TimeCard>
+              <TimeNumber>{String(timeLeft?.dias).padStart(2, "0")}</TimeNumber>
+              <TimeLabel>Días</TimeLabel>
+            </TimeCard>
+            <Separator>:</Separator>
+            <TimeCard>
+              <TimeNumber>
+                {String(timeLeft?.horas).padStart(2, "0")}
+              </TimeNumber>
+              <TimeLabel>Horas</TimeLabel>
+            </TimeCard>
+            <Separator>:</Separator>
+            <TimeCard>
+              <TimeNumber>
+                {String(timeLeft?.minutos).padStart(2, "0")}
+              </TimeNumber>
+              <TimeLabel>Mins</TimeLabel>
+            </TimeCard>
+            <Separator>:</Separator>
+            <TimeCard>
+              <TimeNumber>
+                {String(timeLeft?.segundos).padStart(2, "0")}
+              </TimeNumber>
+              <TimeLabel>Segs</TimeLabel>
+            </TimeCard>
+          </div>
         </>
       ) : (
         <p>No hay festividades en el rango de fechas actual.</p>

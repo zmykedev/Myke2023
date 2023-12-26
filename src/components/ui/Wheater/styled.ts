@@ -1,11 +1,21 @@
 import styled from "styled-components";
 
-export const MainContainer = styled.div`
+type MainProps = {
+  className?: string;
+};
+
+export const MainContainer = styled.div<MainProps>`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100%;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+
+  &.visible {
+    opacity: 1;
+  }
 `;
 
 export const Temperature = styled.div`

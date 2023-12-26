@@ -15,6 +15,7 @@ export interface BoxProps {
     animationName?: string;
     animationStyles?: string;
   };
+  ref?: React.RefObject<HTMLDivElement>;
 }
 
 export interface AnimationProps {
