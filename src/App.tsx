@@ -1,3 +1,5 @@
+import { useRef } from "react";
+
 import { Header } from "./components/ui/Header/Header";
 import { AppWrapper, Main } from "./components/ui/Content/content";
 import { MkBox } from "./components/ui/Timeline/Box/Box";
@@ -16,17 +18,37 @@ import { Month } from "./components/ui/Month";
 import Calendar from "./components/ui/Calendar";
 
 function App() {
+  const homeRef = useRef(null);
+  const aboutRef = useRef(null);
+  const projectsRef = useRef(null);
+  const skillsRef = useRef(null);
+  const experienceRef = useRef(null);
+  const contactRef = useRef(null);
   return (
     <AppWrapper>
-      <Header />
+      <Header
+        sectionRefs={{
+          home: homeRef,
+          about: aboutRef,
+          projects: projectsRef,
+          skills: skillsRef,
+          experience: experienceRef,
+          contact: contactRef,
+        }}
+      />
       <Main>
         <EventLine />
-        <MkBox position="right" height="300px" className=" flex flex-row gap-4">
+        <MkBox
+          ref={homeRef}
+          position="right"
+          height="300px"
+          className=" flex flex-row gap-4"
+        >
           <div className="rounded-3xl w-[50%] bg-accent-200 ">
             <Calendar />{" "}
           </div>
 
-          <div className="rounded-3xl w-[50%] bg-accent-200 flex justify-center ">
+          <div className="rounded-3xl w-[50%] bg-accent-200 flex justify-center items-center flex-col ">
             <Month />
           </div>
         </MkBox>
@@ -42,7 +64,12 @@ function App() {
             <WeatherComponent />
           </div>
         </MkBox>
-        <MkBox position="left" className="bg-primary-100" height="600px">
+        <MkBox
+          ref={aboutRef}
+          position="left"
+          className="bg-primary-100"
+          height="600px"
+        >
           <div className="flex flex-col items-center justify-center ">
             <img className="rounded-full" src={myke} width={300} alt="" />
             <Text className="font-sans text-text-100" fontSize="3rem">

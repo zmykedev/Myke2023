@@ -11,6 +11,7 @@ export const initialState: State = {
 export enum WeatherActionType {
   SET_WEATHER_DATA = "SET_WEATHER_DATA",
   SET_LOADING = "SET_LOADING",
+  SET_VISIBLE = "SET_VISIBLE",
 }
 
 export const weatherReducer = (state: State = initialState, action: Action) =>
@@ -27,6 +28,11 @@ export const weatherReducer = (state: State = initialState, action: Action) =>
             action.payload.current.temperature_2m;
           // No usar setTimeout aquí
         }
+        break;
+
+      case WeatherActionType.SET_VISIBLE:
+        draftstate.transitioning = action.payload;
+
         break;
     }
   });
