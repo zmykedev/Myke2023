@@ -23,8 +23,8 @@ const ChileFestives: Record<string, FestiveRange> = {
     image: xmas,
   },
   newyear: {
-    start: "12-25",
-    end: "01-01",
+    start: "12-26",
+    end: "12-31",
     image: newyear,
   },
 };
@@ -39,7 +39,7 @@ const calcularTiempoRestante = (
 } | null => {
   const ahora = new Date();
   const añoActual = ahora.getFullYear();
-  // Manejar el cambio de año para la festividad de año nuevo
+  console.log(añoActual, "AÑO ACTUAL");
   const añoSiguiente =
     ahora.getMonth() === 11 &&
     ahora.getDate() > parseInt(fechaFin.split("-")[1])

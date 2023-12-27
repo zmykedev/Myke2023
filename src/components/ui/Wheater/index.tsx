@@ -20,9 +20,8 @@ export const WeatherComponent: React.FC = () => {
   const [state, dispatch] = React.useReducer(weatherReducer, initialState);
 
   const fetchWeatherData = async () => {
-   
-
-    try {dispatch({ type: WeatherActionType.SET_LOADING, payload: true });
+    try {
+      dispatch({ type: WeatherActionType.SET_LOADING, payload: true });
       const apiUrl = api.weather.forecast;
       const response = await fetch(apiUrl);
       const data = await response.json();
@@ -40,7 +39,7 @@ export const WeatherComponent: React.FC = () => {
 
     const intervalId = setInterval(() => {
       fetchWeatherData();
-    }, 2000);
+    }, 6000 * 10);
 
     return () => clearInterval(intervalId);
   }, []);
@@ -54,7 +53,9 @@ export const WeatherComponent: React.FC = () => {
   }
 
   return (
-    <MainContainer className={state.transitioning&& !state.loading ? "visible" : ""}>
+    <MainContainer
+      className={state.transitioning && !state.loading ? "visible" : ""}
+    >
       <TitleContainer>Santiago de Chile</TitleContainer>
       <WeatherContainer>
         <WeatherImage src="/assets/Sun.png" />
