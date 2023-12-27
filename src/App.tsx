@@ -57,6 +57,7 @@ function App() {
             <img
               className="bg-accent-200 "
               width={200}
+              alt="country"
               src="/assets/Chilean.png"
             />
           </div>
@@ -76,13 +77,7 @@ function App() {
               Myke Zapata
             </Text>
 
-            <Text
-              className="font-sans  text-text-100"
-              typeWritter
-              typingDuration="1s"
-              typingSteps={10}
-              fontSize="1.2rem"
-            >
+            <Text className="font-sans  text-text-100" fontSize="1.2rem">
               {" "}
               Software Developer Based in Santiago, Chile
             </Text>
@@ -202,21 +197,157 @@ function App() {
             </div>
           </div>
         </MkBox>
+        <MkBox
+          ref={skillsRef}
+          position="left"
+          height="300px"
+          className=" flex flex-row gap-4"
+        >
+          <div className="rounded-3xl flex flex-col justify-center items-center w-[50%] bg-accent-200 drop-shadow-2xl gap-3">
+            <img
+              className="bg-accent-200 rounded-3xl"
+              width={215}
+              alt="country"
+              src="/assets/ReactComponents.webp"
+            />
+
+            <Text className="font-sans  text-text-100" fontSize="1.2rem">
+              {" "}
+              Creación de Componentes
+            </Text>
+          </div>
+          <div className="rounded-3xl flex flex-col justify-center items-center w-[50%] bg-accent-200 drop-shadow-2xl gap-3">
+            <img
+              className="bg-accent-200 rounded-3xl"
+              width={215}
+              alt="country"
+              src="/assets/ManageStates.webp"
+            />
+
+            <Text className="font-sans  text-text-100" fontSize="1.2rem">
+              {" "}
+              Manejo de Estados
+            </Text>
+          </div>
+        </MkBox>
+        <MkBox position="right" height="300px" className=" flex flex-row gap-4">
+          <div className="rounded-3xl flex flex-col justify-center items-center w-[50%] bg-accent-200 drop-shadow-2xl gap-3">
+            <img
+              className="bg-accent-200 rounded-3xl"
+              width={215}
+              alt="country"
+              src="/assets/ManageRoutes.webp"
+            />
+
+            <Text className="font-sans  text-text-100" fontSize="1.2rem">
+              {" "}
+              Enrutamiento
+            </Text>
+          </div>
+          <div className="rounded-3xl flex flex-col justify-center items-center w-[50%] bg-accent-200 drop-shadow-2xl gap-3">
+            <img
+              className="bg-accent-200 rounded-3xl"
+              width={215}
+              alt="country"
+              src="/assets/Styles.webp"
+            />
+
+            <Text className="font-sans  text-text-100" fontSize="1.2rem">
+              {" "}
+              Stylization
+            </Text>
+          </div>
+        </MkBox>
+           <MkBox position="left" height="300px" >
+           <div className="rounded-3xl flex flex-col justify-center items-center w-[50%] bg-accent-200 drop-shadow-2xl gap-3">
+            <img
+              className="bg-accent-200 rounded-3xl"
+              width={215}
+              alt="country"
+              src="/assets/Integration.webp"
+            />
+
+            <Text className="font-sans  text-text-100" fontSize="1.2rem">
+              {" "}
+              Integración de Servicios
+            </Text>
+          </div>
+        </MkBox>{" "}
         <MkBox position="right" height="300px" background="black">
           new
         </MkBox>
-        <MkBox position="right" height="300px" background="black">
-          new
-        </MkBox>{" "}
-        <MkBox position="right" height="300px" background="black">
-          new
-        </MkBox>{" "}
-        <MkBox position="right" height="300px" background="black">
-          new
-        </MkBox>{" "}
-        <MkBox position="right" height="300px" background="black">
-          new
-        </MkBox>{" "}
+          <MkBox position="right" height="300px" className=" flex flex-row gap-4">
+          <div className="rounded-3xl flex flex-col justify-center items-center w-[50%] bg-accent-200 drop-shadow-2xl gap-3">
+            <img
+              className="bg-accent-200 rounded-3xl"
+              width={215}
+              alt="country"
+              src="/assets/Arquitecht.webp"
+            />
+
+            <Text className="font-sans  text-text-100" fontSize="1.2rem">
+              {" "}
+              Arquitectura
+            </Text>
+          </div>
+          <div className="rounded-3xl flex flex-col justify-center items-center w-[50%] bg-accent-200 drop-shadow-2xl gap-3">
+            <img
+              className="bg-accent-200 rounded-3xl"
+              width={215}
+              alt="country"
+              src="/assets/Security.webp"
+            />
+
+            <Text className="font-sans  text-text-100" fontSize="1.2rem">
+              {" "}
+              Seguridad
+            </Text>
+          </div>
+        </MkBox>
+          <MkBox position="left" height="300px" className=" flex flex-row gap-4">
+          <div className="rounded-3xl flex flex-col justify-center items-center w-[50%] bg-accent-200 drop-shadow-2xl gap-3">
+            <img
+              className="bg-accent-200 rounded-3xl"
+              width={215}
+              alt="country"
+              src="/assets/Optimization.webp"
+            />
+
+            <Text className="font-sans  text-text-100" fontSize="1.2rem">
+              {" "}
+              Optimización
+            </Text>
+          </div>
+          <div className="rounded-3xl flex flex-col justify-center items-center w-[50%] bg-accent-200 drop-shadow-2xl gap-3">
+            <img
+              className="bg-accent-200 rounded-3xl"
+              width={215}
+              alt="country"
+              src="/assets/Testing.webp"
+            />
+
+            <Text className="font-sans  text-text-100" fontSize="1.2rem">
+              {" "}
+              Testing
+            </Text>
+          </div>
+        </MkBox>
+      <MkBox position="left" height="300px" className=" flex flex-row gap-4">
+         
+          <div className="rounded-3xl flex flex-col justify-center items-center w-[50%] bg-accent-200 drop-shadow-2xl gap-3">
+            <img
+              className="bg-accent-200 rounded-3xl"
+              width={215}
+              alt="country"
+              src="/assets/Team.webp"
+            />
+
+            <Text className="font-sans  text-text-100" fontSize="1.2rem">
+              {" "}
+              Team 
+            </Text>
+          </div>
+        </MkBox>
         <MkBox position="right" height="300px" background="black">
           new
         </MkBox>{" "}
