@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import { Content } from "./styledContent";
+import { Content } from "./styled";
 
 interface ContentProps {
   children: ReactNode;

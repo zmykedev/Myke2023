@@ -18,8 +18,6 @@ interface BoxStyles {
 }
 
 export const Box = styled.div<BoxStyles>`
-  padding: 10px;
-
   height: ${({ height }) => height ?? "auto"};
   color: ${({ color }) => color ?? "inherit"};
   width: 100%;

@@ -1,0 +1,43 @@
+/* styles.css */
+.card {
+  perspective: 1000px;
+  width: 100%; /* O el ancho de tu tarjeta */
+  height: 100%; /* O la altura de tu tarjeta */
+  display: flex;
+  justify-content: center;
+}
+
+.card .front,
+.card .back {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem; 
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  overflow: hidden;
+   display: flex; 
+   flex-direction: column;
+ margin-top: 20px;
+  align-items: center; 
+}
+
+.card .front {
+  row-gap: 15px;
+}
+
+.card .back {
+  transform: rotateY(180deg);
+   row-gap: 70px;
+}
+
+.card:hover .front {
+  transform: rotateY(-180deg);
+}
+
+.card:hover .back {
+  transform: rotateY(0deg);
+}
