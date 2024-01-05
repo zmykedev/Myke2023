@@ -17,4 +17,8 @@ export const EventLine = styled.div`
   @media (max-width: 1350px) {
     left: 97%;
   }
+
+  @media (max-width: 1300px) {
+    display: none;
+  }
 `;

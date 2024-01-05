@@ -60,7 +60,7 @@ export const WeatherComponent: React.FC = () => {
       <WeatherContainer>
         <WeatherImage src="/assets/Sun.png" />
         {state.weather && (
-          <Temperature>{`${state.weather.current.temperature_2m}°`}</Temperature>
+          <Temperature>{`${state.weather.current.temperature_2m}°C`}</Temperature>
         )}
       </WeatherContainer>
     </MainContainer>

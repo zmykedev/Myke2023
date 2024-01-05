@@ -13,6 +13,7 @@ import "./components/ui/Timeline/index.scss";
 // import { slideEliptic } from "./animations/library";
 import { IconPng } from "./components/ui/Icons/Icons";
 import { StyledStack } from "./components/ui/Icons/styled";
+import { Flip } from "./components/Flip";
 
 import { Month } from "./components/ui/Month";
 import Calendar from "./components/ui/Calendar";
@@ -24,6 +25,116 @@ function App() {
   const skillsRef = useRef(null);
   const experienceRef = useRef(null);
   const contactRef = useRef(null);
+
+  const creationComponents = (
+    <>
+      <img
+        className="bg-accent-200 rounded-3xl"
+        width={215}
+        alt="country"
+        src="/assets/ReactComponents.webp"
+      />
+      <Text className="font-sans text-text-100" fontSize="1.2rem">
+        Creación de Componentes
+      </Text>
+    </>
+  );
+
+  const listComponents = (
+    <>
+      <Text className="font-sans text-text-100" fontSize="1.2rem">
+        Creación de Componentes
+      </Text>
+      <ul className="list-inside text-start text-white">
+        <Text className="font-sans text-text-100" fontSize="1.050rem">
+          100% Escalables
+        </Text>
+        <Text className="font-sans text-text-100" fontSize="1.050rem">
+          TypeScript Sólido
+        </Text>
+        <Text className="font-sans text-text-100" fontSize="1.050rem">
+          Enfoque en Accesibilidad
+        </Text>
+        <Text className="font-sans text-text-100" fontSize="1.050rem">
+          Optimización de Rendimiento
+        </Text>
+        <Text className="font-sans text-text-100" fontSize="1.050rem">
+          Props Dinamicos y Personalizables
+        </Text>
+      </ul>
+    </>
+  );
+
+  const manageStates = (
+    <>
+      {" "}
+      <img
+        className="bg-accent-200 rounded-3xl"
+        width={215}
+        alt="country"
+        src="/assets/ManageStates.webp"
+      />
+      <Text className="font-sans text-text-100 " fontSize="1.2rem">
+        {" "}
+        Gestión de Estados
+      </Text>
+    </>
+  );
+
+  const listStates = (
+    <>
+      <Text className="font-sans text-text-100" fontSize="1.2rem">
+        Gestión de Estados
+      </Text>
+      <ul className="list-inside text-start text-white">
+        <Text className="font-sans text-text-100" fontSize="1.050rem">
+          Uso de Reducer
+        </Text>
+        <Text className="font-sans text-text-100" fontSize="1.050rem">
+          Evitar useState
+        </Text>
+        <Text className="font-sans text-text-100" fontSize="1.050rem">
+          Pruebas Rigurosas
+        </Text>
+        <Text className="font-sans text-text-100" fontSize="1.050rem">
+          Uso de useMemo y useCallback
+        </Text>
+      </ul>
+    </>
+  );
+
+  const router = (
+    <>
+      {" "}
+      <img
+        className="bg-accent-200 rounded-3xl"
+        width={215}
+        alt="country"
+        src="/assets/ManageRoutes.webp"
+      />
+      <Text className="font-sans  text-text-100 " fontSize="1.2rem">
+        {" "}
+        Enrutamiento Eficiente
+      </Text>
+    </>
+  );
+
+  const listRouter = (
+    <>
+      <Text className="font-sans text-text-100" fontSize="1.2rem">
+        Enrutamiento Eficiente
+      </Text>
+      <ul className="list-inside text-start text-white">
+        <Text className="font-sans text-text-100" fontSize="1.050rem">
+          Uso de TanStack Query
+        </Text>
+        <Text className="font-sans text-text-100" fontSize="1.050rem">
+          Integración de Parametros
+        </Text>
+      </ul>
+    </>
+  );
+
   return (
     <AppWrapper>
       <Header
@@ -127,8 +238,6 @@ function App() {
                   path="/assets/Scss.png"
                   redirect="https://sass-lang.com/"
                 />
-                {/* <IconPng path="/assets/React.png"  />
-              <IconPng path="/assets/Tailwind.png" /> */}
               </StyledStack>
             </div>{" "}
             <div className="">
@@ -203,48 +312,22 @@ function App() {
           height="300px"
           className=" flex flex-row gap-4"
         >
-          <div className="rounded-3xl flex flex-col justify-center items-center w-[50%] bg-accent-200 drop-shadow-2xl gap-3">
-            <img
-              className="bg-accent-200 rounded-3xl"
-              width={215}
-              alt="country"
-              src="/assets/ReactComponents.webp"
-            />
-
-            <Text className="font-sans  text-text-100" fontSize="1.2rem">
-              {" "}
-              Creación de Componentes
-            </Text>
+          <div className=" rounded-3xl flex flex-col justify-center items-center w-[50%] bg-accent-200 drop-shadow-2xl gap-3">
+            <Flip front={creationComponents} back={listComponents} />
           </div>
-          <div className="rounded-3xl flex flex-col justify-center items-center w-[50%] bg-accent-200 drop-shadow-2xl gap-3">
-            <img
-              className="bg-accent-200 rounded-3xl"
-              width={215}
-              alt="country"
-              src="/assets/ManageStates.webp"
-            />
-
-            <Text className="font-sans  text-text-100" fontSize="1.2rem">
-              {" "}
-              Manejo de Estados
-            </Text>
+          <div className=" rounded-3xl flex flex-col justify-center items-center w-[50%] bg-accent-200 drop-shadow-2xl gap-3">
+            <Flip front={manageStates} back={listStates} />
           </div>
         </MkBox>
-        <MkBox position="right" height="300px" className=" flex flex-row gap-4">
-          <div className="rounded-3xl flex flex-col justify-center items-center w-[50%] bg-accent-200 drop-shadow-2xl gap-3">
-            <img
-              className="bg-accent-200 rounded-3xl"
-              width={215}
-              alt="country"
-              src="/assets/ManageRoutes.webp"
-            />
-
-            <Text className="font-sans  text-text-100" fontSize="1.2rem">
-              {" "}
-              Enrutamiento
-            </Text>
+        <MkBox
+          position="right"
+          height="300px"
+          className=" flex flex-row gap-4 "
+        >
+          <div className=" rounded-3xl flex flex-col justify-center items-center w-[50%] bg-accent-200 drop-shadow-2xl gap-3">
+            <Flip front={router} back={listRouter} />
           </div>
-          <div className="rounded-3xl flex flex-col justify-center items-center w-[50%] bg-accent-200 drop-shadow-2xl gap-3">
+          <div className=" rounded-3xl flex flex-col justify-center items-center w-[50%] bg-accent-200 drop-shadow-2xl gap-3">
             <img
               className="bg-accent-200 rounded-3xl"
               width={215}
@@ -252,89 +335,27 @@ function App() {
               src="/assets/Styles.webp"
             />
 
-            <Text className="font-sans  text-text-100" fontSize="1.2rem">
+            <Text className="font-sans  text-text-100 " fontSize="1.2rem">
               {" "}
               Stylization
             </Text>
           </div>
         </MkBox>
-           <MkBox position="left" height="300px" >
-           <div className="rounded-3xl flex flex-col justify-center items-center w-[50%] bg-accent-200 drop-shadow-2xl gap-3">
+        <MkBox height="280px" className=" flex flex-row gap-4 ">
+          <div className=" rounded-3xl flex flex-col justify-center items-center w-[50%] bg-accent-200 drop-shadow-2xl gap-3  xl:relative left-card  ">
             <img
               className="bg-accent-200 rounded-3xl"
-              width={215}
+              width={210}
               alt="country"
               src="/assets/Integration.webp"
             />
 
-            <Text className="font-sans  text-text-100" fontSize="1.2rem">
+            <Text className="font-sans  text-text-100 " fontSize="1.2rem">
               {" "}
               Integración de Servicios
             </Text>
           </div>
-        </MkBox>{" "}
-        <MkBox position="right" height="300px" background="black">
-          new
-        </MkBox>
-          <MkBox position="right" height="300px" className=" flex flex-row gap-4">
-          <div className="rounded-3xl flex flex-col justify-center items-center w-[50%] bg-accent-200 drop-shadow-2xl gap-3">
-            <img
-              className="bg-accent-200 rounded-3xl"
-              width={215}
-              alt="country"
-              src="/assets/Arquitecht.webp"
-            />
-
-            <Text className="font-sans  text-text-100" fontSize="1.2rem">
-              {" "}
-              Arquitectura
-            </Text>
-          </div>
-          <div className="rounded-3xl flex flex-col justify-center items-center w-[50%] bg-accent-200 drop-shadow-2xl gap-3">
-            <img
-              className="bg-accent-200 rounded-3xl"
-              width={215}
-              alt="country"
-              src="/assets/Security.webp"
-            />
-
-            <Text className="font-sans  text-text-100" fontSize="1.2rem">
-              {" "}
-              Seguridad
-            </Text>
-          </div>
-        </MkBox>
-          <MkBox position="left" height="300px" className=" flex flex-row gap-4">
-          <div className="rounded-3xl flex flex-col justify-center items-center w-[50%] bg-accent-200 drop-shadow-2xl gap-3">
-            <img
-              className="bg-accent-200 rounded-3xl"
-              width={215}
-              alt="country"
-              src="/assets/Optimization.webp"
-            />
-
-            <Text className="font-sans  text-text-100" fontSize="1.2rem">
-              {" "}
-              Optimización
-            </Text>
-          </div>
-          <div className="rounded-3xl flex flex-col justify-center items-center w-[50%] bg-accent-200 drop-shadow-2xl gap-3">
-            <img
-              className="bg-accent-200 rounded-3xl"
-              width={215}
-              alt="country"
-              src="/assets/Testing.webp"
-            />
-
-            <Text className="font-sans  text-text-100" fontSize="1.2rem">
-              {" "}
-              Testing
-            </Text>
-          </div>
-        </MkBox>
-      <MkBox position="left" height="300px" className=" flex flex-row gap-4">
-         
-          <div className="rounded-3xl flex flex-col justify-center items-center w-[50%] bg-accent-200 drop-shadow-2xl gap-3">
+          <div className=" rounded-3xl flex flex-col justify-center items-center w-[50%] bg-accent-200 drop-shadow-2xl gap-3   xl:relative right-card ">
             <img
               className="bg-accent-200 rounded-3xl"
               width={215}
@@ -342,12 +363,74 @@ function App() {
               src="/assets/Team.webp"
             />
 
-            <Text className="font-sans  text-text-100" fontSize="1.2rem">
+            <Text className="font-sans  text-text-100 " fontSize="1.2rem">
               {" "}
-              Team 
+              Team
+            </Text>
+          </div>
+        </MkBox>{" "}
+        <MkBox position="right" height="300px" className=" flex flex-row gap-4">
+          <div className=" rounded-3xl flex flex-col justify-center items-center w-[50%] bg-accent-200 drop-shadow-2xl gap-3">
+            <img
+              className="bg-accent-200 rounded-3xl"
+              width={215}
+              alt="country"
+              src="/assets/Arquitecht.webp"
+            />
+
+            <Text className="font-sans  text-text-100 " fontSize="1.2rem">
+              {" "}
+              Arquitectura
+            </Text>
+          </div>
+          <div className=" rounded-3xl flex flex-col justify-center items-center w-[50%] bg-accent-200 drop-shadow-2xl gap-3">
+            <img
+              className="bg-accent-200 rounded-3xl"
+              width={215}
+              alt="country"
+              src="/assets/Security.webp"
+            />
+
+            <Text className="font-sans  text-text-100 " fontSize="1.2rem">
+              {" "}
+              Seguridad
             </Text>
           </div>
         </MkBox>
+        <MkBox position="left" height="300px" className=" flex flex-row gap-4">
+          <div className=" rounded-3xl flex flex-col justify-center items-center w-[50%] bg-accent-200 drop-shadow-2xl gap-3">
+            <img
+              className="bg-accent-200 rounded-3xl"
+              width={215}
+              alt="country"
+              src="/assets/Optimization.webp"
+            />
+
+            <Text className="font-sans  text-text-100 " fontSize="1.2rem">
+              {" "}
+              Optimización
+            </Text>
+          </div>
+
+          <div className=" rounded-3xl flex flex-col justify-center items-center w-[50%] bg-accent-200 drop-shadow-2xl gap-3">
+            <img
+              className="bg-accent-200 rounded-3xl"
+              width={215}
+              alt="country"
+              src="/assets/Testing.webp"
+            />
+
+            <Text className="font-sans  text-text-100 " fontSize="1.2rem">
+              {" "}
+              Testing
+            </Text>
+          </div>
+        </MkBox>
+        <MkBox
+          position="left"
+          height="300px"
+          className=" flex flex-row gap-4"
+        ></MkBox>
         <MkBox position="right" height="300px" background="black">
           new
         </MkBox>{" "}

@@ -8,13 +8,15 @@
     "build": "tsc && vite build",
     "format": "prettier \"src/**/*.{ts,tsx}\" --write",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@emotion/css": "^11.11.2",
     "@radix-ui/react-slot": "^1.0.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
+    "gh-pages": "^6.1.1",
     "immer": "^10.0.3",
     "lucide-react": "^0.287.0",
     "next": "^14.0.4",

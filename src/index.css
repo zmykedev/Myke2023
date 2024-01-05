@@ -86,3 +86,40 @@
    
   }
 }
+
+
+
+@media (min-width: 1350px)  {
+  .left-card {
+    right: 450px; 
+  }
+
+  .right-card {
+    right: 170px;
+  }
+  
+}
+
+@media (max-width: 1350px) {
+  .small-card {
+  display: flex;
+  align-items: flex-start; 
+  padding-left: 20px;
+  }
+
+ .card-title {
+    position: absolute;
+    top: 0px; 
+    color: white; 
+  }
+
+   .card-list {
+    position: absolute;
+    top: 80px; 
+    right: 10px;
+    text-align: center;
+    color: white; 
+  }
+
+ 
+}

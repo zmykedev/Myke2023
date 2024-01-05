@@ -65,5 +65,6 @@ export const NavLink = styled.a`
       0.884
     ); // Color de fondo al hacer hover
     border-radius: 20px; // Aumenta el radio de borde al hacer hover
+    cursor: pointer;
   }
 `;
