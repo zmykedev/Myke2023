@@ -4,8 +4,8 @@ interface HeaderProps {
     home: React.RefObject<HTMLElement>;
     about: React.RefObject<HTMLElement>;
     skills: React.RefObject<HTMLElement>;
-    experience: React.RefObject<HTMLElement>;
     projects: React.RefObject<HTMLElement>;
+    testimonials: React.RefObject<HTMLElement>;
     contact: React.RefObject<HTMLElement>;
   };
 }
@@ -34,11 +34,11 @@ export const Header: React.FunctionComponent<HeaderProps> = ({
         <NavLink onClick={() => scrollToSection(sectionRefs.skills)}>
           Skills
         </NavLink>
-        <NavLink onClick={() => scrollToSection(sectionRefs.experience)}>
-          Experiencia
-        </NavLink>
         <NavLink onClick={() => scrollToSection(sectionRefs.projects)}>
           Proyectos
+        </NavLink>
+        <NavLink onClick={() => scrollToSection(sectionRefs.testimonials)}>
+          Testimonios
         </NavLink>
         <NavLink onClick={() => scrollToSection(sectionRefs.contact)}>
           Contacto
