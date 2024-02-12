@@ -1,5 +1,5 @@
 import React from "react";
-import { Box } from "./Box/styled";
+import { Box } from "../Box/styled";
 import { EventLine } from "./styled";
 
 export interface TimelineEvent {

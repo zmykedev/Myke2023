@@ -27,24 +27,6 @@ export const Box = styled.div<BoxStyles>`
   box-sizing: border-box;
   transition: width 1s ease;
 
-  ${({ position }) =>
-    position === "left"
-      ? `
-    float: left;
-    
-    clear: left;
-   
-  `
-      : `
-    float: right;
-    clear: right;
-   
-  `}
-
-  @media (min-width: 1350px) {
-    width: 48%;
-  }
-
   ${({ animationProps }) =>
     animationProps
       ? `

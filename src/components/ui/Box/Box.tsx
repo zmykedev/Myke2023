@@ -7,7 +7,6 @@ export const MkBox = React.forwardRef<HTMLDivElement, BoxProps>(
     const {
       children,
       height,
-      position,
       width,
       color,
       background,
@@ -19,7 +18,6 @@ export const MkBox = React.forwardRef<HTMLDivElement, BoxProps>(
       <Box
         ref={ref}
         height={height}
-        position={position}
         className={className}
         width={width}
         color={color}
