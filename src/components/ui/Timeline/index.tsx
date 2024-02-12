@@ -1,5 +1,9 @@
 import React from "react";
+<<<<<<< HEAD
+import { Box } from "../Box/styled";
+=======
 import { Box } from "./Box/styled";
+>>>>>>> origin
 import { EventLine } from "./styled";
 
 export interface TimelineEvent {

@@ -1,0 +1,41 @@
+@keyframes brillo-lente {
+  0%, 100% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.5; /* Comienza a aparecer */
+  }
+  50% {
+    transform: translateX(10px); /* Se mueve hacia el lado y alcanza su máxima opacidad */
+    opacity: 0.8;
+  }
+  75% {
+    opacity: 0.5; /* Comienza a desvanecerse */
+  }
+}
+
+
+
+
+.lentes-con-brillo::after,
+.lentes-con-brillo::before {
+  content: '';
+  position: absolute;
+  width: 10%; /* El ancho del brillo */
+  height: 10%; /* El alto del brillo */
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 70%);
+  animation: brillo-lente 1.2s ease-in-out forwards;
+  border-radius: 50%; /* Esto creará un efecto de 'brillo' circular */
+}
+
+.lentes-con-brillo::after {
+  top: 39.5%; /* Ajusta estos valores para que coincidan con la posición del lente izquierdo */
+  left: 39%; /* Ajusta estos valores para que coincidan con la posición del lente izquierdo */
+}
+
+.lentes-con-brillo::before {
+  top: 38.7%; /* Ajusta estos valores para que coincidan con la posición del lente derecho */
+  left: 55%; /* Ajusta estos valores para que coincidan con la posición del lente derecho */
+}
+

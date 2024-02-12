@@ -32,12 +32,7 @@ export const StyledIcon = styled.img<StyledProps>`
 `;
 
 export const StyledStack = styled.div`
-  display: flex;
-  justify-content: start;
-  gap: 3rem;
+  padding: 8px;
+  gap: 1rem;
   transition: gap 1s ease;
-
-  @media (min-width: 1350px) {
-    gap: 1.5rem;
-  }
 `;

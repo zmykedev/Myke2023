@@ -2,236 +2,224 @@ import { useRef } from "react";
 
 import { Header } from "./components/ui/Header/Header";
 import { AppWrapper, Main } from "./components/ui/Content/content";
-import { MkBox } from "./components/ui/Timeline/Box/Box";
-import { Text } from "./components/ui/Title/styles";
-import { WeatherComponent } from "./components/ui/Wheater";
+import { Stack } from "./Stack";
+import { MkBox } from "./components/ui/Box/Box";
 
 import "./index.css";
-import { EventLine } from "./components/ui/Timeline/styled";
-import myke from "/assets/Myke.jpeg";
-import "./components/ui/Timeline/index.scss";
-// import { slideEliptic } from "./animations/library";
-import { IconPng } from "./components/ui/Icons/Icons";
-import { StyledStack } from "./components/ui/Icons/styled";
-import { Flip } from "./components/Flip";
 
-import { Month } from "./components/ui/Month";
-import Calendar from "./components/ui/Calendar";
-// import { useParallax } from 'react-scroll-parallax';
+import "./components/ui/Timeline/index.scss";
 
 function App() {
   const homeRef = useRef(null);
   const aboutRef = useRef(null);
   const projectsRef = useRef(null);
   const skillsRef = useRef(null);
-  const experienceRef = useRef(null);
+  // const experienceRef = useRef(null);
   const testimonialRef = useRef(null);
   const contactRef = useRef(null);
 
-  const creationComponents = (
-    <>
-      <img
-        className="bg-accent-200 rounded-3xl"
-        width={215}
-        alt="country"
-        src="/assets/ReactComponents.webp"
-      />
-      <Text className="font-sans text-text-100" fontSize="1.2rem">
-        Creación de Componentes
-      </Text>
-    </>
-  );
+  // const creationComponents = (
+  //   <>
+  //     <img
+  //       className="bg-accent-200 rounded-3xl"
+  //       width={215}
+  //       alt="country"
+  //       src="/assets/ReactComponents.webp"
+  //     />
+  //     <Text className="font-sans text-text-100" fontSize="1.2rem">
+  //       Creación de Componentes
+  //     </Text>
+  //   </>
+  // );
 
-  const listComponents = (
-    <>
-      <Text className="font-sans text-text-100" fontSize="1.2rem">
-        Creación de Componentes
-      </Text>
-      <ul className="list-inside text-start text-white">
-        <Text className="font-sans text-text-100" fontSize="1.050rem">
-          100% Escalables
-        </Text>
-        <Text className="font-sans text-text-100" fontSize="1.050rem">
-          TypeScript Sólido
-        </Text>
-        <Text className="font-sans text-text-100" fontSize="1.050rem">
-          Enfoque en Accesibilidad
-        </Text>
-        <Text className="font-sans text-text-100" fontSize="1.050rem">
-          Optimización de Rendimiento
-        </Text>
-        <Text className="font-sans text-text-100" fontSize="1.050rem">
-          Props Dinamicos y Personalizables
-        </Text>
-      </ul>
-    </>
-  );
+  // const listComponents = (
+  //   <>
+  //     <Text className="font-sans text-text-100" fontSize="1.2rem">
+  //       Creación de Componentes
+  //     </Text>
+  //     <ul className="list-inside text-start text-white">
+  //       <Text className="font-sans text-text-100" fontSize="1.050rem">
+  //         100% Escalables
+  //       </Text>
+  //       <Text className="font-sans text-text-100" fontSize="1.050rem">
+  //         TypeScript Sólido
+  //       </Text>
+  //       <Text className="font-sans text-text-100" fontSize="1.050rem">
+  //         Enfoque en Accesibilidad
+  //       </Text>
+  //       <Text className="font-sans text-text-100" fontSize="1.050rem">
+  //         Optimización de Rendimiento
+  //       </Text>
+  //       <Text className="font-sans text-text-100" fontSize="1.050rem">
+  //         Props Dinamicos y Personalizables
+  //       </Text>
+  //     </ul>
+  //   </>
+  // );
 
-  const manageStates = (
-    <>
-      {" "}
-      <img
-        className="bg-accent-200 rounded-3xl"
-        width={215}
-        alt="country"
-        src="/assets/ManageStates.webp"
-      />
-      <Text className="font-sans text-text-100 " fontSize="1.2rem">
-        {" "}
-        Gestión de Estados
-      </Text>
-    </>
-  );
+  // const manageStates = (
+  //   <>
+  //     {" "}
+  //     <img
+  //       className="bg-accent-200 rounded-3xl"
+  //       width={215}
+  //       alt="country"
+  //       src="/assets/ManageStates.webp"
+  //     />
+  //     <Text className="font-sans text-text-100 " fontSize="1.2rem">
+  //       {" "}
+  //       Gestión de Estados
+  //     </Text>
+  //   </>
+  // );
 
-  const listStates = (
-    <>
-      <Text className="font-sans text-text-100" fontSize="1.2rem">
-        Gestión de Estados
-      </Text>
-      <ul className="list-inside text-start text-white">
-        <Text className="font-sans text-text-100" fontSize="1.050rem">
-          Uso de Reducer
-        </Text>
-        <Text className="font-sans text-text-100" fontSize="1.050rem">
-          Evitar uso de useState
-        </Text>
-        <Text className="font-sans text-text-100" fontSize="1.050rem">
-          Pruebas Rigurosas
-        </Text>
-        <Text className="font-sans text-text-100" fontSize="1.050rem">
-          Uso de useMemo y useCallback
-        </Text>
-      </ul>
-    </>
-  );
+  // const listStates = (
+  //   <>
+  //     <Text className="font-sans text-text-100" fontSize="1.2rem">
+  //       Gestión de Estados
+  //     </Text>
+  //     <ul className="list-inside text-start text-white">
+  //       <Text className="font-sans text-text-100" fontSize="1.050rem">
+  //         Uso de Reducer
+  //       </Text>
+  //       <Text className="font-sans text-text-100" fontSize="1.050rem">
+  //         Evitar uso de useState
+  //       </Text>
+  //       <Text className="font-sans text-text-100" fontSize="1.050rem">
+  //         Pruebas Rigurosas
+  //       </Text>
+  //       <Text className="font-sans text-text-100" fontSize="1.050rem">
+  //         Uso de useMemo y useCallback
+  //       </Text>
+  //     </ul>
+  //   </>
+  // );
 
-  const services = (
-    <>
-      {" "}
-      <img
-        className="bg-accent-200 rounded-3xl"
-        width={215}
-        alt="country"
-        src="/assets/Integration.webp"
-      />
-      <Text className="font-sans  text-text-100 " fontSize="1.2rem">
-        {" "}
-        Integración de Servicios
-      </Text>
-    </>
-  );
+  // const services = (
+  //   <>
+  //     {" "}
+  //     <img
+  //       className="bg-accent-200 rounded-3xl"
+  //       width={215}
+  //       alt="country"
+  //       src="/assets/Integration.webp"
+  //     />
+  //     <Text className="font-sans  text-text-100 " fontSize="1.2rem">
+  //       {" "}
+  //       Integración de Servicios
+  //     </Text>
+  //   </>
+  // );
 
-  const listRouter = (
-    <>
-      <Text className="font-sans text-text-100" fontSize="1.2rem">
-        Integración de Servicios
-      </Text>
-      <ul className="list-inside text-start text-white">
-        <Text className="font-sans text-text-100" fontSize="1.050rem">
-          Uso de TanStack Query
-        </Text>
-        <Text className="font-sans text-text-100" fontSize="1.050rem">
-          useQuery y useMutation
-        </Text>
-        <Text className="font-sans text-text-100" fontSize="1.050rem">
-          Gestión de Cache
-        </Text>
-        <Text className="font-sans text-text-100" fontSize="1.050rem">
-          Refetching y Polling
-        </Text>
-      </ul>
-    </>
-  );
+  // const listRouter = (
+  //   <>
+  //     <Text className="font-sans text-text-100" fontSize="1.2rem">
+  //       Integración de Servicios
+  //     </Text>
+  //     <ul className="list-inside text-start text-white">
+  //       <Text className="font-sans text-text-100" fontSize="1.050rem">
+  //         Uso de TanStack Query
+  //       </Text>
+  //       <Text className="font-sans text-text-100" fontSize="1.050rem">
+  //         useQuery y useMutation
+  //       </Text>
+  //       <Text className="font-sans text-text-100" fontSize="1.050rem">
+  //         Gestión de Cache
+  //       </Text>
+  //       <Text className="font-sans text-text-100" fontSize="1.050rem">
+  //         Refetching y Polling
+  //       </Text>
+  //     </ul>
+  //   </>
+  // );
 
-  const stylization = (
-    <>
-      {" "}
-      <img
-        className="bg-accent-200 rounded-3xl"
-        width={215}
-        alt="country"
-        src="/assets/Styles.webp"
-      />
-      <Text className="font-sans  text-text-100 " fontSize="1.2rem">
-        {" "}
-        Estilización Avanzada
-      </Text>
-    </>
-  );
+  // const stylization = (
+  //   <>
+  //     {" "}
+  //     <img
+  //       className="bg-accent-200 rounded-3xl"
+  //       width={215}
+  //       alt="country"
+  //       src="/assets/Styles.webp"
+  //     />
+  //     <Text className="font-sans  text-text-100 " fontSize="1.2rem">
+  //       {" "}
+  //       Estilización Avanzada
+  //     </Text>
+  //   </>
+  // );
 
-  const stylesList = (
-    <>
-      <Text className="font-sans text-text-100" fontSize="1.2rem">
-        Estilización Avanzada
-      </Text>
-      <ul className="list-inside text-start text-white">
-        <Text className="font-sans text-text-100" fontSize="1.050rem">
-          Integracion de Tailwind-CSS
-        </Text>
-        <Text className="font-sans text-text-100" fontSize="1.050rem">
-          Diseño Responsivo
-        </Text>
-        <Text className="font-sans text-text-100" fontSize="1.050rem">
-          Animaciones y Transiciones
-        </Text>
-        <Text className="font-sans text-text-100" fontSize="1.050rem">
-          Styled-Components o Emotion
-        </Text>
-        <Text className="font-sans text-text-100" fontSize="1.050rem">
-          Preprocesador SASS
-        </Text>
-      </ul>
-    </>
-  );
+  // const stylesList = (
+  //   <>
+  //     <Text className="font-sans text-text-100" fontSize="1.2rem">
+  //       Estilización Avanzada
+  //     </Text>
+  //     <ul className="list-inside text-start text-white">
+  //       <Text className="font-sans text-text-100" fontSize="1.050rem">
+  //         Integracion de Tailwind-CSS
+  //       </Text>
+  //       <Text className="font-sans text-text-100" fontSize="1.050rem">
+  //         Diseño Responsivo
+  //       </Text>
+  //       <Text className="font-sans text-text-100" fontSize="1.050rem">
+  //         Animaciones y Transiciones
+  //       </Text>
+  //       <Text className="font-sans text-text-100" fontSize="1.050rem">
+  //         Styled-Components o Emotion
+  //       </Text>
+  //       <Text className="font-sans text-text-100" fontSize="1.050rem">
+  //         Preprocesador SASS
+  //       </Text>
+  //     </ul>
+  //   </>
+  // );
 
-  const team = (
-    <>
-      {" "}
-      <img
-        className="bg-accent-200 rounded-3xl"
-        width={215}
-        alt="country"
-        src="/assets/Team.webp"
-      />
-      <Text className="font-sans  text-text-100 " fontSize="1.2rem">
-        {" "}
-        Team Building
-      </Text>
-    </>
-  );
+  // const team = (
+  //   <>
+  //     {" "}
+  //     <img
+  //       className="bg-accent-200 rounded-3xl"
+  //       width={215}
+  //       alt="country"
+  //       src="/assets/Team.webp"
+  //     />
+  //     <Text className="font-sans  text-text-100 " fontSize="1.2rem">
+  //       {" "}
+  //       Team Building
+  //     </Text>
+  //   </>
+  // );
 
-  const teamList = (
-    <>
-      <Text className="font-sans text-text-100" fontSize="1.2rem">
-        Team Building
-      </Text>
-      <ul className="list-inside text-start text-white">
-        <Text className="font-sans text-text-100" fontSize="1.050rem">
-          Daily Collaboration
-        </Text>
+  // const teamList = (
+  //   <>
+  //     <Text className="font-sans text-text-100" fontSize="1.2rem">
+  //       Team Building
+  //     </Text>
+  //     <ul className="list-inside text-start text-white">
+  //       <Text className="font-sans text-text-100" fontSize="1.050rem">
+  //         Daily Collaboration
+  //       </Text>
 
-        <Text className="font-sans text-text-100" fontSize="1.050rem">
-          Pair Programming
-        </Text>
-        <Text className="font-sans text-text-100" fontSize="1.050rem">
-          Sesiones de Brainstorming
-        </Text>
-        <Text className="font-sans text-text-100" fontSize="1.050rem">
-          Feedback Constructivo
-        </Text>
+  //       <Text className="font-sans text-text-100" fontSize="1.050rem">
+  //         Pair Programming
+  //       </Text>
+  //       <Text className="font-sans text-text-100" fontSize="1.050rem">
+  //         Sesiones de Brainstorming
+  //       </Text>
+  //       <Text className="font-sans text-text-100" fontSize="1.050rem">
+  //         Feedback Constructivo
+  //       </Text>
 
-        <Text className="font-sans text-text-100" fontSize="1.050rem">
-          Promover un Ambiente Inclusivo
-        </Text>
-      </ul>
-    </>
-  );
+  //       <Text className="font-sans text-text-100" fontSize="1.050rem">
+  //         Promover un Ambiente Inclusivo
+  //       </Text>
+  //     </ul>
+  //   </>
+  // );
 
-  // const { ref } = useParallax({ speed: 10 });
-
-  const handleGo = () => {
-    window.open("https://sucursalvirtual.ccc.cl/");
-  };
+  // const handleGo = () => {
+  //   window.open("https://sucursalvirtual.ccc.cl/");
+  // };
 
   return (
     <AppWrapper>
@@ -246,8 +234,17 @@ function App() {
         }}
       />
       <Main>
-        <EventLine />
         <MkBox
+          ref={homeRef}
+          className="flex flex-col mt-20 sm:h-[580px] sm:w-[300px] sm:p-2  sm:flex sm:flex-row justify-around gap-1 bg-accent-200 "
+        >
+          <Stack />
+        </MkBox>
+        <MkBox
+          height="580px"
+          className=" flex flex-row justify-around gap-1 bg-accent-200 "
+        ></MkBox>{" "}
+        {/* <MkBox
           ref={homeRef}
           position="right"
           height="300px"
@@ -260,8 +257,28 @@ function App() {
           <div className="rounded-3xl w-[50%] bg-accent-200 flex justify-center items-center flex-col ">
             <Month />
           </div>
+        </MkBox> */}
+      </Main>{" "}
+      {/* 
+        
+        <EventLine />  
+        <MkBox
+         ref={homeRef}
+          position="right"
+          height="300px"
+          className=" flex flex-row gap-4"
+
+      
+        >
+        <div  className="rounded-3xl w-[50%] bg-accent-200 ">
+            <Calendar  />{" "}
+          </div>
+
+          <div className="rounded-3xl w-[50%] bg-accent-200 flex justify-center items-center flex-col ">
+            <Month />
+          </div>
         </MkBox>
-        <MkBox position="left" height="300px" className=" flex flex-row gap-4">
+        <MkBox position="left" height="300px" className=" flex flex-row gap-4" >
           <div className="rounded-3xl flex justify-center items-center w-[50%] bg-accent-200 drop-shadow-2xl">
             <img
               className="bg-accent-200 "
@@ -272,15 +289,15 @@ function App() {
           </div>
           <div className="rounded-3xl w-[50%] bg-accent-200 ">
             <WeatherComponent />
-          </div>
+          </div> 
         </MkBox>
         <MkBox
-          ref={aboutRef}
+         ref={aboutRef}
           position="left"
           className="bg-primary-100"
           height="600px"
         >
-          <div className="flex flex-col items-center justify-center ">
+          <div   className="flex flex-col items-center justify-center ">
             <img className="rounded-full" src={myke} width={300} alt="" />
             <Text className="font-sans text-text-100" fontSize="3rem">
               Myke Zapata
@@ -314,9 +331,10 @@ function App() {
           position="right"
           height="600px"
           className="bg-primary-100  lg:block"
+ 
         >
           <div className="flex flex-col start gap-12 pl-5">
-            <div className="">
+            <div  className="">
               <Text className="font-sans drop-shadow-2xl" fontSize="3rem">
                 <span className="text-red-500">S</span>
                 <span className="text-blue-500">t</span>
@@ -327,15 +345,16 @@ function App() {
                 <span className="text-pink-500 ">s</span>
               </Text>
 
-              <StyledStack>
+              <StyledStack><Fade  triggerOnce cascade duration={1700} direction="right">
                 <IconPng
                   path="/assets/Css.png"
                   redirect="https://developer.mozilla.org/es/docs/Web/CSS"
-                />
+                /> </Fade>
+               <Fade  triggerOnce cascade duration={2400} direction="right">
                 <IconPng
                   path="/assets/Scss.png"
                   redirect="https://sass-lang.com/"
-                />
+                /> </Fade>
               </StyledStack>
             </div>{" "}
             <div className="">
@@ -508,29 +527,24 @@ function App() {
           height="500px"
           background="black"
         >
-          <div className="cursor-pointer rounded-3xl flex flex-row justify-start items-center p-10 bg-primary-100 drop-shadow-2xl gap-3">
+          <div className="cursor-pointer rounded-3xl flex flex-row items-center p-10 bg-primary-100 drop-shadow-2xl gap-3">
             <img
               className="rounded-3xl"
-              width={80}
-              alt="integra"
-              src="/assets/ccc.png"
+              width={200}
+              alt="marcelo"
+              src="/assets/Marcelo.jpeg"
             />
             <Text className="font-sans  text-text-100 " fontSize="1.2rem">
-              Maikol es un desarrollador frontend excepcional, especializado en
-              React y TypeScript. Su habilidad para crear interfaces web
-              interactivas y de alta calidad es notable. Destaca por su enfoque
-              en la usabilidad y accesibilidad, asegurando que cada aplicación
-              sea inclusiva y eficiente. Es un colaborador ejemplar, siempre
-              dispuesto a compartir su conocimiento y contribuir al equipo. Su
-              pasión y dedicación lo convierten en un activo invaluable en
-              cualquier proyecto de desarrollo web.
+              Maikol destaca en desarrollo frontend con React, TypeScript y Tailwind CSS, enfocándose en interfaces accesibles y eficientes. Su portafolio de React refleja innovación y habilidades técnicas. Es un colaborador comprometido con la excelencia y el aprendizaje continuo.
             </Text>
           </div>
         </MkBox>
         <MkBox position="left" height="300px" background="black">
-          <div className="cursor-pointer rounded-3xl flex flex-col justify-center items-center bg-primary-100 drop-shadow-2xl gap-3">
-            <img></img>
-            <div></div>
+          <div className="cursor-pointer rounded-3xl flex flex-row  items-center p-10 bg-primary-100 drop-shadow-2xl gap-3">
+            <img className="rounded-3xl"
+              width={200} src="/assets/Anderson.jpeg" alt="anderson" />
+             <Text className="font-sans  text-text-100 " fontSize="1.2rem">
+Myke es un colaborador esencial, conocido por su excelencia y aprendizaje continuo. Con habilidades técnicas destacadas y capacidad de motivar a su equipo, su ingenio y creatividad son claves en el desarrollo de soluciones frontend innovadoras            </Text>
           </div>
         </MkBox>
         <MkBox position="right" height="300px" background="black">
@@ -544,8 +558,8 @@ function App() {
         </MkBox>{" "}
         <MkBox position="right" height="300px" background="black">
           new
-        </MkBox>
-      </Main>
+        </MkBox> */}
+      {/* */}
     </AppWrapper>
   );
 }
