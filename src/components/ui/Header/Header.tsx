@@ -1,4 +1,4 @@
-import { Wrap, Nav } from "./styled";
+import { Wrap} from "./styled";
 import { MotionButton } from "./components/MotionButton";
 import { User, Folder, MessageCircle, MailIcon, StarIcon } from "lucide-react";
 
