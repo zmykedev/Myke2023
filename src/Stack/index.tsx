@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Fade } from "react-awesome-reveal";
+
 import { Text } from "@/components/ui/Title/styles";
 import { StyledStack } from "@/components/ui/Icons/styled";
 import { IconPng } from "@/components/ui/Icons/Icons";
